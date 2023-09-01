@@ -5,6 +5,9 @@ import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Vendor {
+
+    //comentario de prueba, aaaa
+
     public static final int MAX_NAME = 35;
     public static final int MAX_ZONE = 15;
 
