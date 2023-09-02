@@ -14,8 +14,8 @@ import java.util.logging.Logger;
 public class CopyCSV {
     public static void main(String args[]) {
 
-        final String dataPath = "/Users/rnavarro/data/vendors-data.dat";
-        final String csvPath = "/Users/rnavarro/data/csv/vendors-data.csv";
+        final String dataPath = "vendors-data.dat";
+        final String csvPath = "vendors.csv";
         // final String csvPath =  "D:\\data\\vendorsata.csv";
         //final String dataPath = "D:\\data\\vendors-data.dat";
         BufferedReader csvFile = null;
@@ -38,7 +38,7 @@ public class CopyCSV {
 
                 registroVendedor = parseRecord(record);
 
-                datFile.writeInt( registroVendedor.getCodigo() );
+                datFile.writeLong( registroVendedor.getCodigo() );
 
                 buffer = registroVendedor.getNombre().getBytes();
                 datFile.write(buffer);
@@ -48,6 +48,9 @@ public class CopyCSV {
 
                 buffer = registroVendedor.getZona().getBytes();
                 datFile.write(buffer);
+
+               // buffer = registroVendedor.getVentas().getBytes();
+                //datFile.write(buffer);
 
             }
             System.out.printf("Done in %d miliseconds\n", System.currentTimeMillis() - time );

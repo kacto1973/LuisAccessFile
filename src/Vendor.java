@@ -13,7 +13,7 @@ public class Vendor {
 
     public static final int RECORD_LEN = 67; //eran 62 originalmente
 
-    private int codigo;      // 4 bytes
+    private long codigo;      // 4 bytes
     private String nombre;   // 35 bytes
     private Date fecha;      // 8 bytes, almacenado en long
     private String zona;     // 15 bytes
@@ -42,7 +42,7 @@ public class Vendor {
         super();
     }
 
-    public int getCodigo() {
+    public long getCodigo() {
         return codigo;
     }
 
