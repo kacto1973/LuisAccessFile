@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Vendor {
 
     //comentario de prueba, aaaa
-    //pollaaaaaaaaaaaaa
 
 
     public static final int MAX_NAME = 35;
