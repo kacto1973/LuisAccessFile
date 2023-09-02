@@ -1,5 +1,6 @@
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import javax.swing.*;
+import java.awt.*;
+import java.io.*;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -7,7 +8,6 @@ import java.util.logging.Logger;
 
 public class RandomVendorFile {
 
-    //testeoaaaaaaaaaaa
     private String fileName;
 
     public RandomVendorFile(String fileName) {
@@ -119,7 +119,9 @@ public class RandomVendorFile {
 
     public static void main(String[] args) {
 
-        final String dataPath = "vendors-data.dat";
+
+
+ final String dataPath = "vendors-data.dat";
 
         RandomVendorFile randomFile = new RandomVendorFile(dataPath);
 
@@ -131,12 +133,12 @@ public class RandomVendorFile {
 
         int pos = (n * Vendor.RECORD_LEN) - Vendor.RECORD_LEN;
 
-        long t1 = System.currentTimeMillis();
+        //long t1 = System.currentTimeMillis();
         Vendor p = randomFile.read(pos);
-        long t2 = System.currentTimeMillis();
+        //long t2 = System.currentTimeMillis();
         System.out.println(p);
-        System.out.println(t2 - t1);
+        //System.out.println(t2 - t1);
 
-    }
+    }//fin main
 
 }

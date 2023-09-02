@@ -6,19 +6,18 @@ import java.util.Scanner;
 
 public class Vendor {
 
-    //comentario de prueba, aaaa
 
 
     public static final int MAX_NAME = 35;
     public static final int MAX_ZONE = 15;
 
-    public static final int RECORD_LEN = 62;
+    public static final int RECORD_LEN = 67; //eran 62 originalmente
 
     private int codigo;      // 4 bytes
     private String nombre;   // 35 bytes
     private Date fecha;      // 8 bytes, almacenado en long
     private String zona;     // 15 bytes
-    private Long ventas;
+    private Long ventas;     // 5 bytes  valor asignado por nosotros
 
     public Vendor(int codigo, String nombre, Date fecha, String zona, Long ventas) {
         super();
@@ -101,7 +100,7 @@ public class Vendor {
         int day = parser.nextInt();
         int year = parser.nextInt();
 
-        GregorianCalendar calendar = new GregorianCalendar(year,month, day);
+        GregorianCalendar calendar = new GregorianCalendar(year,month,day);
 
         this.fecha = calendar.getTime();
     }
